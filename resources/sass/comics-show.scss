@@ -1,0 +1,145 @@
+.show-details {
+    background-color: #FFF;
+    color: $dark;
+
+    .poster-container {
+
+        background-color: $dc-blue;
+        height: 5rem;
+        position: relative;
+
+        .img-container {
+            position: absolute;
+            bottom: 1rem;
+            border: 1px solid #FFF;
+
+            img {
+                display: block;
+                width: 200px;
+            }
+        }
+
+        .type {
+            position: absolute;
+            top: 0;
+            left: 0;
+            background-color: #00a9d9;
+            text-transform: uppercase;
+            padding: 0.25rem;
+            font-size: 0.75rem;
+
+            &.gallery {
+                top: unset;
+                bottom: 0;
+                right: 0;
+                text-align: center;
+            }
+        }
+    }
+
+    .comic-desc {
+        padding: 4.5rem 0;
+        display: flex;
+        gap: 2rem;
+
+        .content {
+            flex-basis: 70%;
+
+            h1 {
+                text-transform: uppercase;
+                padding-bottom: 2rem;
+            }
+
+            .buy {
+                background-color: #55ba59;
+                display: flex;
+                justify-content: space-between;
+                padding: 1rem 1.5rem;
+                color: #FFF;
+                margin-bottom: 1rem;
+                border-bottom: 1px solid $dark;
+
+
+                .price {
+                    display: flex;
+                    justify-content: space-between;
+                    flex-grow: 1;
+                }
+
+                .check {
+                    padding-left: 1.5rem;
+                    position: relative;
+
+                    select {
+                        background-color: transparent;
+                        border: none;
+                        color: #FFF;
+                        font-weight: bold;
+                    }
+
+                    &::before {
+                        content: "";
+                        position: absolute;
+                        height: calc(100% + 2rem);
+                        width: 1px;
+                        background-color: $dark;
+                        top: -1rem;
+                        left: 0.75rem;
+                    }
+                }
+
+                strong {
+                    color: #bafc9a;
+                }
+            }
+        }
+
+        .adv {
+            flex-basis: 30%;
+            display: flex;
+            flex-direction: column;
+            align-items: flex-end;
+
+            h3 {
+                text-transform: uppercase;
+                padding-bottom: 0.5rem;
+            }
+        }
+
+    }
+
+    .comic-details {
+        background-color: #f6f6f6;
+        border-top: 1px solid #e5e5e5;
+        border-bottom: 1px solid #e5e5e5;
+
+        .container {
+            padding-bottom: 6rem;
+        }
+
+        .grid-container {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 4rem;
+
+            h3 {
+                padding-bottom: 1.5rem;
+            }
+
+            ul {
+                display: grid;
+                grid-template-columns: repeat(2, 1fr);
+
+                li {
+                    border-top: 1px solid #e5e5e5;
+                    padding: 0.5rem 0;
+
+                    &:last-child,
+                    &:nth-last-child(2) {
+                        border-bottom: 1px solid #e5e5e5;
+                    }
+                }
+            }
+        }
+    }
+}

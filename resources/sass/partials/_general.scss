@@ -1,0 +1,47 @@
+@import './variables';
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 2rem 1rem;
+}
+
+img {
+    max-width: 100%;
+}
+
+ul,
+ol,
+menu {
+    list-style: none;
+}
+
+a {
+    color: currentColor;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.c-blue {
+    color: #00a9d9;
+}
+
+.txt-up {
+    text-transform: uppercase;
+}
+
+.btn {
+    padding: 1rem 5rem;
+    background-color: $dc-blue;
+    text-transform: uppercase;
+    display: inline-block;
+    font-weight: bold;
+    cursor: pointer;
+    color: #FFF;
+}

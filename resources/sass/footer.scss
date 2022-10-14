@@ -1,0 +1,132 @@
+.footer-header {
+    background-color: $dc-blue;
+
+    .container {
+        color: #FFF;
+        padding: 3rem 1rem;
+
+        .footer-list {
+            @include list-wrapper;
+            white-space: nowrap;
+
+            .footer__list__item {
+                @include list-items;
+                flex-grow: 1;
+
+                a {
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    gap: 1rem;
+
+                    img {
+                        height: 50px;
+                    }
+                }
+
+            }
+
+        }
+    }
+}
+
+span {
+    display: none;
+}
+
+a:hover span {
+    display: block;
+}
+
+a:hover {
+    flex-direction: column;
+}
+
+@media (min-width: 1024px) {
+    span {
+        display: inline;
+    }
+
+    a:hover {
+        flex-direction: row;
+    }
+}
+
+.footer-main {
+    background-image: url('../assets/footer-bg.jpg');
+    background-size: cover;
+
+    .container {
+        display: flex;
+        padding: 2rem 0;
+        color: #FFF;
+        background-image: url('../assets/dc-logo-bg.png');
+        background-repeat: no-repeat;
+        background-position: center right;
+        gap: 2rem;
+        justify-content: flex-start;
+        align-items: flex-start;
+    }
+}
+
+.lists-wrapper {
+
+    .list {
+        margin-bottom: 1rem;
+
+        &:first-child {
+            display: flex;
+            flex-direction: column;
+        }
+
+        h3 {
+            text-transform: uppercase;
+            font-weight: bold;
+            margin-bottom: 1rem;
+        }
+
+        li:not(.list-title) {
+            line-height: 1.5rem;
+            font-size: 0.75rem;
+            color: #818181;
+        }
+
+        li a:hover {
+            text-decoration: underline;
+        }
+    }
+}
+
+.footer-footer {
+    background-color: $grey;
+
+    .container {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        text-transform: uppercase;
+
+        .sign-up {
+            color: white;
+            border: 1px solid $dc-blue;
+            padding: 1rem;
+            cursor: pointer;
+        }
+
+        .socials {
+            display: flex;
+            gap: 2rem;
+            align-items: center;
+
+            .socials-title {
+                color: $dc-blue;
+            }
+
+            .icons {
+                .list-wrapper {
+                    @include list-wrapper;
+                }
+            }
+        }
+    }
+}

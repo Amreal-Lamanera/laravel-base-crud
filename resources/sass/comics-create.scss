@@ -1,0 +1,35 @@
+.create {
+    .container {
+        h2 {
+            text-align: center;
+            text-transform: uppercase;
+            margin-bottom: 2rem;
+        }
+
+        .flex {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 2rem;
+        }
+
+        #txt-area {
+            padding-top: 2rem;
+            display: flex;
+            align-items: flex-start;
+            gap: 2rem;
+
+            textarea {
+                padding: 0.5rem;
+            }
+        }
+
+        .form-element {
+            font-size: 1.5rem;
+        }
+
+        .form-element:last-child {
+            display: flex;
+            justify-content: flex-end;
+        }
+    }
+}

@@ -1,0 +1,10 @@
+@mixin list-wrapper {
+    display: flex;
+    gap: 1.5rem;
+}
+
+@mixin list-items {
+    text-transform: uppercase;
+    font-weight: bold;
+    font-size: 1rem;
+}
