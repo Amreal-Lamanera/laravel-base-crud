@@ -51,7 +51,7 @@
                         <label for="sale_date">
                             Data di uscita (anno-mese-giorno)
                         </label>
-                        <input type="text" name="sale_date" id="sale_date" placeholder="Data di uscita">
+                        <input type="date" name="sale_date" id="sale_date" placeholder="Data di uscita">
                     </div>
                 </div>
 
