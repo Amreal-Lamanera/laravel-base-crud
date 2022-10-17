@@ -35,7 +35,7 @@
 
                 <div class="btn" id="delete_btn">Delete</div>
                 
-                <div class="alert">
+                <div class="alert_popup">
                     <span>
                         Sei sicuro di voler eliminare il fumetto?
                     </span>
@@ -158,10 +158,10 @@
 
 <script>
     $('#delete_btn').click(function() {
-        $('.alert').css('display', 'flex');
+        $('.alert_popup').css('display', 'flex');
     });
     $('#not_delete').click(function() {
-        $('.alert').css('display', 'none');
+        $('.alert_popup').css('display', 'none');
     });
 </script>
 
