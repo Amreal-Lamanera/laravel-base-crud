@@ -26,17 +26,37 @@
     <div class="container comic-desc">
         <div class="content">
             <div class="route">
-                <form action="{{ route('comics.edit', $comic) }}" method="GET">
+                {{-- <form action="{{ route('comics.edit', $comic) }}" method="GET"> --}}
                     @csrf
+                <div class="btn">
+                    <a href="{{ route('comics.edit', $comic) }}">
+                        Modifica
+                    </a>
+                </div>
 
-                    <input class="btn" type="submit" value="Modifica">
-                </form>
-                <form action="{{ route('comics.destroy', $comic) }}" method="POST">
+                    {{-- <input class="btn" type="submit" value="Modifica"> --}}
+                {{-- </form> --}}
+                {{-- <form action="{{ route('comics.destroy', $comic) }}" method="POST">
                     @csrf
                     @method('DELETE')
 
                     <input class="btn" type="submit" value="Elimina">
-                </form>
+                </form> --}}
+                <div class="btn" id="delete_btn">Delete</div>
+                <div class="alert">
+                    <span>
+                        Sei sicuro di voler eliminare il fumetto?
+                    </span>
+                    <div class="btns-wrapper">
+                        <form action="{{ route('comics.destroy', $comic) }}" method="POST">
+                            @csrf
+                            @method('DELETE')
+    
+                            <input class="btn" type="submit" value="Elimina">
+                        </form>
+                        <input id="not_delete" type="button" class="btn" value="Annulla">
+                    </div>
+                </div>
             </div>
             <h1>
                 {{ $comic->title }}
@@ -143,5 +163,14 @@
     </div>
     
 </div>
+
+<script>
+    $('#delete_btn').click(function() {
+        $('.alert').css('display', 'block');
+    });
+    $('#not_delete').click(function() {
+        $('.alert').css('display', 'none');
+    });
+</script>
 
 @endsection

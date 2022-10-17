@@ -60,3 +60,29 @@ a {
 input.btn {
     border: none;
 }
+
+.alert {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #FFF;
+    border: 5px solid #00a9d9;
+    z-index: 9999;
+    padding: 10rem;
+    font-size: 2rem;
+    display: none;
+}
+
+.alert .btns-wrapper {
+    display: flex;
+    justify-content: space-between;
+}
+
+.alert .btns-wrapper .btn {
+    height: 50px;
+}
+
+.container.comic-desc {
+    position: relative;
+}
