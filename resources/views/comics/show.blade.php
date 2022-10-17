@@ -26,23 +26,15 @@
     <div class="container comic-desc">
         <div class="content">
             <div class="route">
-                {{-- <form action="{{ route('comics.edit', $comic) }}" method="GET"> --}}
-                    @csrf
+
                 <div class="btn">
                     <a href="{{ route('comics.edit', $comic) }}">
                         Modifica
                     </a>
                 </div>
 
-                    {{-- <input class="btn" type="submit" value="Modifica"> --}}
-                {{-- </form> --}}
-                {{-- <form action="{{ route('comics.destroy', $comic) }}" method="POST">
-                    @csrf
-                    @method('DELETE')
-
-                    <input class="btn" type="submit" value="Elimina">
-                </form> --}}
                 <div class="btn" id="delete_btn">Delete</div>
+                
                 <div class="alert">
                     <span>
                         Sei sicuro di voler eliminare il fumetto?
@@ -166,7 +158,7 @@
 
 <script>
     $('#delete_btn').click(function() {
-        $('.alert').css('display', 'block');
+        $('.alert').css('display', 'flex');
     });
     $('#not_delete').click(function() {
         $('.alert').css('display', 'none');

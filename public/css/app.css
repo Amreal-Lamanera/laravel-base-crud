@@ -60,29 +60,29 @@ input.btn {
 }
 
 .alert {
-  position: absolute;
+  position: fixed;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
   background-color: #FFF;
   border: 5px solid #00a9d9;
+  border-radius: 0.5rem;
   z-index: 9999;
-  padding: 10rem;
-  font-size: 2rem;
+  padding: 5rem;
+  font-size: 1.5rem;
   display: none;
+  flex-direction: column;
+  gap: 2rem;
+  box-shadow: 0 0 10px black;
 }
 
 .alert .btns-wrapper {
   display: flex;
-  justify-content: space-between;
+  justify-content: space-evenly;
 }
 
 .alert .btns-wrapper .btn {
   height: 50px;
-}
-
-.container.comic-desc {
-  position: relative;
 }
 
 header {
