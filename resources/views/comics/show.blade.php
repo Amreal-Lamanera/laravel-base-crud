@@ -25,6 +25,19 @@
     
     <div class="container comic-desc">
         <div class="content">
+            <div class="route">
+                <form action="{{ route('comics.edit', $comic) }}" method="GET">
+                    @csrf
+
+                    <input class="btn" type="submit" value="Modifica">
+                </form>
+                <form action="{{ route('comics.destroy', $comic) }}" method="POST">
+                    @csrf
+                    @method('DELETE')
+
+                    <input class="btn" type="submit" value="Elimina">
+                </form>
+            </div>
             <h1>
                 {{ $comic->title }}
             </h1>

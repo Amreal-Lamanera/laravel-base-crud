@@ -44,6 +44,21 @@ a {
   color: #FFF;
 }
 
+.route .btn {
+  padding: 0.5rem 1rem;
+}
+
+.route {
+  margin-bottom: 2rem;
+  display: flex;
+  gap: 2rem;
+  justify-content: flex-start;
+}
+
+input.btn {
+  border: none;
+}
+
 header {
   display: flex;
   justify-content: space-between;
